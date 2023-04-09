@@ -1,0 +1,23 @@
+[
+    {
+        "img": "image1.jpg",
+        "name": "Sunset over the ocean",
+        "about": "This is a beautiful sunset over the ocean."
+      },
+      {
+        "img": "image2.jpg",
+        "name": "Hot air balloon in a field",
+        "about": "A colorful hot air balloon floating over a field."
+      },
+      {
+        "img": "image3.jpg",
+        "name": "Kitten playing with yarn",
+        "about": "A cute kitten playing with a ball of yarn."
+      },
+      {
+        "img": "image4.jpg",
+        "name": "Mountain landscape at sunset",
+        "about": "A stunning mountain landscape at sunset."
+      }
+]
+  
