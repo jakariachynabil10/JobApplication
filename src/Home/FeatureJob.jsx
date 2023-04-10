@@ -23,7 +23,7 @@ const FeatureJob = ({data}) => {
           <p className='flex'><img src={locationIcon} alt="" />{location}</p>
           <p className='flex'><img src={sallaryIcon} alt="" />{salary}</p>
           </div>
-        <Link to={`jobDetails/${id}`}>  <button className="border rounded-lg px-7 text-white mt-6 py-4 font-semibold btn-color">
+        <Link to={`/jobDetails/${id}`}>  <button  className="border rounded-lg px-7 text-white mt-6 py-4 font-semibold btn-color">
           View Details
             </button></Link>
             </div>  

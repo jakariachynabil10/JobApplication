@@ -11,6 +11,16 @@
   background: linear-gradient(to right, #7E90FE, #9873FF);
 }
 
+.bg-color{
+  background: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
+  background-image: url('./assets/All Images/Vector.png'),  url('./assets/All Images/Vector-1.png');
+  background-repeat: no-repeat;
+  background-position: top left , top right;
+  /* background-size: cover; */
+
+}
+
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
