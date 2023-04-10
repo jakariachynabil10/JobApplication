@@ -11,6 +11,7 @@ import Home from './Home/Home';
 import Statistics from './Statistics/Statistics';
 import AppliedJobs from './AppliedJobs/AppliedJobs';
 import Blog from './Blog/Blog';
+import { NormalDataLoad } from './normalDataLoad/NormalDataLoad';
 
 const router = createBrowserRouter([
   {
@@ -20,11 +21,13 @@ const router = createBrowserRouter([
     children : [
       {
         path : '/',
-        element : <Home></Home>
+        element : <Home></Home>,
+        loader : NormalDataLoad
       },
       {
         path : 'home',
-        element : <Home></Home>
+        element : <Home></Home>,
+        loader : NormalDataLoad
       },
       {
         path : 'statistics',
