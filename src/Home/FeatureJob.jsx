@@ -4,7 +4,6 @@ import sallaryIcon from '../assets/Icons/Frame.png'
 import { Link } from 'react-router-dom';
 
 const FeatureJob = ({data}) => {
-    console.log(data)
     const {brand_name , company_name, location, salary, img, id } = data
     return (
         <>

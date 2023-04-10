@@ -5,19 +5,22 @@ import { useLoaderData } from "react-router-dom";
 import FeatureJob from "./FeatureJob";
 
 const Home = () => {
-  const loadNormalData = useLoaderData()
+  const loadNormalData = useLoaderData();
   // console.log(loadNormalData)
 
-  const [brand , setBrand] = useState([])
-  useEffect( ()=>{
-    const load = async ()=>{
-      const res = await fetch('jobData.json')
-      const data = await res.json()
-      setBrand(data)
-    }
-    load()
-  } , [])
- 
+  const [brand, setBrand] = useState([]);
+  const [showAllJobs, setShowAllJobs] = useState(false);
+  useEffect(() => {
+    const load = async () => {
+      const res = await fetch("jobData.json");
+      const data = await res.json();
+      setBrand(data);
+    };
+    load();
+  }, []);
+
+  const jobsToShow = showAllJobs ? brand : brand.slice(0, 4);
+
   return (
     <>
       {/* Banner section */}
@@ -44,26 +47,37 @@ const Home = () => {
       </section>
 
       <section className="mt-32">
-      <h2 className="font-bold text-5xl text-center">Job Category List</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-4 mx-16 gap-4 mt-8">
-      {
-        loadNormalData.map(data => <JobCatg key={data.id} data={data}></JobCatg>)
-       }
-      </div>
+        <h2 className="font-bold text-5xl text-center">Job Category List</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-4 mx-16 gap-4 mt-8">
+          {loadNormalData.map((data) => (
+            <JobCatg key={data.id} data={data}></JobCatg>
+          ))}
+        </div>
       </section>
 
       <section className="mt-32">
-      <h2 className="font-bold text-5xl text-center">Featured Jobs</h2>
-      <p className="text-center pt-4 font-medium">
+        <h2 className="font-bold text-5xl text-center">Featured Jobs</h2>
+        <p className="text-center pt-4 font-medium">
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8 mx-9">
-          {
-            brand.map(data => <FeatureJob key={data.id} data={data}></FeatureJob>)
-          }
+          {jobsToShow.map((data) => (
+            <FeatureJob key={data.id} data={data}></FeatureJob>
+          ))}
         </div>
       </section>
+
+      <div className="flex justify-center">
+        {!showAllJobs && (
+          <button
+            onClick={() => setShowAllJobs(true)}
+            className="border rounded-lg px-7 text-white mt-6 py-4 font-semibold btn-color"
+          >
+            See All Jobs
+          </button>
+        )}
+      </div>
     </>
   );
 };
