@@ -4,7 +4,7 @@ import sallaryIcon from '../assets/Icons/Frame.png'
 import { Link } from 'react-router-dom';
 
 const FeatureJob = ({data}) => {
-    const {brand_name , company_name, location, salary, img, id } = data
+    const {brand_name , company_name, location, salary, img, id, position } = data
     return (
         <>
           <div className='border rounded-lg  p-10 w-full'>
@@ -13,7 +13,7 @@ const FeatureJob = ({data}) => {
             <p className='font-semibold text-xl text-gray-400 pt-2'>{brand_name}</p>
             <div className='flex gap-3 mt-4'>
                 <div>
-                    <button className='border border-blue-300 font-bold text-base rounded-lg py-2 px-5 text-blue-300'>Remote</button>
+                    <button className='border border-blue-300 font-bold text-base rounded-lg py-2 px-5 text-blue-300'>{position}</button>
                 </div>
                 <div>
                 <button className='border border-blue-300 font-bold text-base rounded-lg py-2 px-5 text-blue-300'>Full Time</button>
@@ -23,7 +23,7 @@ const FeatureJob = ({data}) => {
           <p className='flex'><img src={locationIcon} alt="" />{location}</p>
           <p className='flex'><img src={sallaryIcon} alt="" />{salary}</p>
           </div>
-        <Link>  <button className="border rounded-lg px-7 text-white mt-6 py-4 font-semibold btn-color">
+        <Link to={`jobDetails/${id}`}>  <button className="border rounded-lg px-7 text-white mt-6 py-4 font-semibold btn-color">
           View Details
             </button></Link>
             </div>  

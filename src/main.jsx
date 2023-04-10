@@ -12,6 +12,7 @@ import Statistics from './Statistics/Statistics';
 import AppliedJobs from './AppliedJobs/AppliedJobs';
 import Blog from './Blog/Blog';
 import { NormalDataLoad } from './normalDataLoad/NormalDataLoad';
+import JobDetails from './JobDetails/JobDetails';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         path : 'home',
         element : <Home></Home>,
         loader : NormalDataLoad
+      },
+      {
+        path : 'jobDetails/:jobId',
+        element : <JobDetails></JobDetails>,
+        loader : () => fetch(`/jobData.json`)
       },
       {
         path : 'statistics',
