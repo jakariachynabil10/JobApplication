@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 
+.font-family{
+  font-family: 'Manrope', sans-serif;
+}
+
+.btn-color{
+  background: linear-gradient(to right, #7E90FE, #9873FF);
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

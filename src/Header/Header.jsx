@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="navbar">
+      <div className="navbar  shadow-xl">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal  px-1">
+          <ul className="menu menu-horizontal px-1">
             <li>
             <Link to='/home'>Home</Link>
             </li>
@@ -62,7 +62,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className="border rounded-lg px-7 py-4 font-semibold bg-blue-400">Star Applying</Link>
+        <button>  <Link className="border rounded-lg px-7 py-4 font-semibold btn-color text-white">Star Applying</Link></button>
         </div>
       </div>
     </>
