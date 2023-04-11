@@ -13,6 +13,7 @@ import AppliedJobs from './AppliedJobs/AppliedJobs';
 import Blog from './Blog/Blog';
 import { NormalDataLoad } from './normalDataLoad/NormalDataLoad';
 import JobDetails from './JobDetails/JobDetails';
+import { jobDataLoader } from './loaderWIthGetStorage/LoaderWithGetStorage';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,8 @@ const router = createBrowserRouter([
       },
       {
         path : 'appliedJobs',
-        element : <AppliedJobs></AppliedJobs> 
+        element : <AppliedJobs></AppliedJobs> ,
+        loader : jobDataLoader
       },
       {
         path : 'blog',

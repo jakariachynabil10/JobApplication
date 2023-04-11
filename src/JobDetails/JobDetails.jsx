@@ -6,6 +6,11 @@ import sallaryIcon from "../assets/Icons/Frame.png";
 import phoneIcon from "../assets/Icons/Frame-2.png";
 import emailIcon from "../assets/Icons/Frame-3.png";
 import address from "../assets/Icons/Frame-4.png";
+import { addToDb } from "../localStorage/LocalStorage";
+
+
+
+
 const JobDetails = () => {
   const { jobId } = useParams();
   const loadData = useLoaderData();
@@ -13,11 +18,12 @@ const JobDetails = () => {
   const [jobsId, setJobsId] = useState([]);
   useEffect(() => {
     const find = loadData.find((data) => data.id == jobId);
-    console.log(find);
+    // console.log(find);
     setJobsId(find);
   }, [jobId, loadData]);
   // console.log(jobsId)
   const {
+    id,
     description,
     responsibility,
     educational_requirements,
@@ -28,6 +34,11 @@ const JobDetails = () => {
     phone_number,
     location,
   } = jobsId;
+
+  const handleToApplyNow = (id) =>{
+    // console.log(id)
+    addToDb(id)
+  }
 
   return (
     <>
@@ -81,7 +92,7 @@ const JobDetails = () => {
               </p>
             </div>
           </div>
-            <button className="border w-[350px] ml-4 rounded-lg px-7 text-white mt-8 py-4 font-semibold btn-color">
+            <button onClick={() => handleToApplyNow(id)} className="border w-[350px] ml-4 rounded-lg px-7 text-white mt-8 py-4 font-semibold btn-color">
             Apply Now
             </button>
          </div>

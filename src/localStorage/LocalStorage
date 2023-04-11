@@ -1,0 +1,43 @@
+// use local storage to manage cart data
+const addToDb = id => {
+    let employData = getEmployData();
+    // add quantity
+    const quantity = employData[id];
+    if (!quantity) {
+        employData[id] = 1;
+    }
+    else {
+       const playersId = employData[id] 
+    }
+    localStorage.setItem('employApplication', JSON.stringify(employData));
+}
+
+const removeFromDb = id => {
+    const employData = getEmployData();
+    if (id in employData) {
+        delete employData[id];
+        localStorage.setItem('employApplication', JSON.stringify(employData));
+    }
+}
+
+const getEmployData = () => {
+    let employData = {};   
+
+    //get the shopping cart from local storage
+    const storedCart = localStorage.getItem('employApplication');
+    if (storedCart) {
+        employData = JSON.parse(storedCart);
+    }
+    return employData;
+}
+
+const deleteShoppingCart = () => {
+    localStorage.removeItem('employApplication');
+}
+
+export {
+    addToDb,
+    removeFromDb,
+    getEmployData,
+    deleteShoppingCart
+}
