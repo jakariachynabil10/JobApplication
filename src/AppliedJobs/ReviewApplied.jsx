@@ -10,8 +10,8 @@ const ReviewApplied = ({ d }) => {
   return (
     <>
       <div className="border rounded-lg mx-16 lg:flex justify-between items-center my-5 p-5">
-        <div className="lg:flex gap-3">
-        <img className='h-[39.98px]' src={img} alt="" />
+        <div className="lg:flex gap-3 items-center">
+        <img className='h-[100px] w-[240px]' src={img} alt="" />
           <div>
             <h2 className="pt-8 font-bold text-2xl">{company_name}</h2>
             <p className="font-semibold text-xl text-gray-400 pt-2">
