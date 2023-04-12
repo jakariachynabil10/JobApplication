@@ -1,5 +1,5 @@
-###### Job Search Hub #####
-Job search hub is website where user can apply for differenet kind of jobs
+###### BRAC Application #####
+BRAC Application is website where user can apply for differenet kind of jobs
 I will explain how the website functionality works
 ____________________
 
@@ -11,7 +11,7 @@ here user will see a introduction to motivate them
    ###### Job Category List ######
 in this section user will see 4 types of job catagories
 
-   Featured Jobs
+   ###### Featured Jobs ######
 in this section user can see jobs are placed and their details such as job type location,salary etc and also by clicking job details it will redirect to another page where user will see more details about that job
 
    ###### job Details #######
