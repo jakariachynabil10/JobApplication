@@ -88,7 +88,7 @@
     "email": "alice.lee@umbrellacorp.com",
     "phone_number": "+1-555-444-5555",
     "job_title": "Research Scientist",
-    "img": "https://images.unsplash.com/photo-1621768216002-5ac171876625?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80",
+    "img": "../assets/CareerHub.png",
     "position": "remote",
     "description": "We are seeking a highly skilled software engineer to join our team. This role involves developing, maintaining, and optimizing our technical database.",
     "responsibility": "Design and implement technical database solutions; maintain and optimize existing systems; troubleshoot and resolve database-related issues.",
