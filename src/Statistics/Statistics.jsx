@@ -14,7 +14,6 @@ const Statistics = () => {
         data={assaigmentData}
         >
             <Line dataKey='marks' stroke="#8884d8"></Line>
-            <Line dataKey='marks' stroke="#8884d8"></Line>
             <XAxis dataKey='assignment'></XAxis>
             <YAxis></YAxis>
             <Tooltip></Tooltip>

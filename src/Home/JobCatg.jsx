@@ -7,7 +7,7 @@ const JobCatg = ({ data }) => {
     <>
       <div className="bg-blue-50 pt-5 card card-compact w-[250px] bg-base-100 shadow-xl">
         <figure>
-          <img src={img} alt="Shoes" />
+          <img src={img} alt="" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
