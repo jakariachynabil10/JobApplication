@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import ReviewApplied from "./ReviewApplied";
 
 const AppliedJobs = () => {
   const DataLoader = useLoaderData();
   const [dataCart, setDataCart] = useState(DataLoader);
+  const [selectedOption, setSelectedOption] = useState('all');
+
+  // useEffect( () =>{
+
+  // }, [])
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+    if (option === 'remote') {
+      const remoteData = DataLoader.filter(item => item.position === 'remote');
+      setDataCart(remoteData);
+    } else if (option === 'onsite') {
+      const onsiteData = DataLoader.filter(item => item.position === 'onsite');
+      setDataCart(onsiteData);
+    } else {
+      setDataCart(DataLoader);
+    }
+  }
   return (
     <>
       <div className="flex justify-end">
@@ -24,10 +42,10 @@ const AppliedJobs = () => {
             </button>
             <ul className="p-2 bg-base-100">
               <li>
-                <Link><button>Remote</button></Link>
+                <Link><button onClick={() => handleOptionChange('remote')}>Remote</button></Link>
               </li>
               <li>
-              <Link><button>Onsite</button></Link>
+              <Link><button  onClick={() => handleOptionChange('onsite')}>Onsite</button></Link>
 
               </li>
             </ul>

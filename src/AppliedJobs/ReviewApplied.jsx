@@ -4,7 +4,7 @@ import sallaryIcon from "../assets/Icons/Frame.png";
 import { Link } from "react-router-dom";
 
 const ReviewApplied = ({ d }) => {
-  console.log(d);
+  // console.log(d);
   const { brand_name, company_name, location, salary, img, id, position } = d;
 
   return (
